@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing Auth w/ jQuery & Mongo</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <button>Ajax</button>
+    <script>
+        $("button").on("click", function () {
+            $.ajax({
+                url: "https://api.mlab.com/api/1/databases/mongodb://everyman:123Four56@ds123196.mlab.com:23196/testing-auth/collections/will-this-work?apiKey=N37pCsHHefPxcfX6CT5XQ3BYUg6VZnf9",
+                data: JSON.stringify({
+                    "x": 1
+                }),
+                type: "POST",
+                contentType: "application/json"
+            });
+        })
+    </script>
+</body>
+
+</html>
+
